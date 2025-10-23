@@ -13,4 +13,9 @@ Create a hero section with a centered headline, subheadline, and full-width back
 Add a section for a real-world impact story with text and an image, and a donation section with a bold 'Donate Now' button.
 
 ## Make It Responsive
-Add CSS media queries so this landing page looks good on both desktop and mobile devices. Add code comments to help explain why we use media queries.
+Add CSS media queries so this landing page looks good on both desktop and mobile devices. Add code comments to help explain why we use media queries.[text](prompts.md)
+
+
+
+
+
