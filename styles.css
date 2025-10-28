@@ -32,6 +32,39 @@ body {
   color: #222;
 }
 
+/* Simple header and navigation styles */
+.site-header {
+  background: transparent;
+  padding: 12px 16px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.logo {
+  font-weight: 700;
+  color: #2E9DF7;
+}
+.logo-image {
+  height: 42px; /* Small logo in the header */
+  display: block;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
   background: #fff; /* White background for sections */
@@ -60,6 +93,74 @@ section {
   background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
 }
 
+/* A simple centered container to limit content width */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Hero inner: split content and visual */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 36px 0;
+}
+
+.hero-content {
+  flex: 1 1 420px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 2.1rem;
+  margin: 0 0 10px 0;
+}
+
+.lead {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.cta-group {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-visual {
+  flex: 0 0 220px;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* Decorative image inside the hero (e.g., water can). We keep it small and responsive */
+.hero-image {
+  width: 140px;
+  max-width: 28%;
+  position: absolute;
+  right: 18px;
+  bottom: 12px;
+  opacity: 0.95;
+  pointer-events: none; /* Decorative only */
+}
+
 /* Make the headline bold and modern */
 .hero h1 {
   font-size: 2.5em;
@@ -67,6 +168,12 @@ section {
   letter-spacing: 1px;
   margin-bottom: 15px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+}
+
+.hero-sub {
+  opacity: 0.95;
+  margin-top: 8px;
+  font-size: 0.95em;
 }
 
 /* Style the subheadline */
@@ -109,31 +216,45 @@ h2 {
 }
 
 /* Donate Button Styles */
+/* Donate button: improved contrast and focus styles for accessibility */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
+  background-color: #159A48; /* Dark Green for better contrast */
   color: #fff;
-  padding: 14px 32px;
+  padding: 14px 28px;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.05em;
   margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
+  box-shadow: 0 4px 14px rgba(21, 154, 72, 0.14);
+  transition: background 0.18s, transform 0.12s;
+  border: 2px solid rgba(0,0,0,0.06);
   cursor: pointer;
 }
 
 /* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+  background-color: #13753b;
+  transform: translateY(-2px) scale(1.03); /* Slight lift */
+}
+
+.donate-button:focus {
+  outline: 3px solid rgba(79, 203, 83, 0.25);
+  outline-offset: 3px;
 }
 
 /* Add some spacing between sections */
 section {
   margin-bottom: 20px;
+}
+
+/* Footer styles */
+.site-footer {
+  text-align: center;
+  padding: 18px 12px;
+  color: #444;
+  font-size: 0.95em;
 }
 
 /* 
@@ -146,7 +267,7 @@ section {
 @media (max-width: 600px) {
   /* Make hero section padding smaller on small screens */
   .hero {
-    padding: 32px 8px;
+    padding: 20px 8px;
     font-size: 1em;
   }
 
@@ -195,4 +316,76 @@ section {
   .impact-image {
     width: 300px;
   }
+}
+
+/* Feature cards */
+.features {
+  padding: 22px 0;
+}
+.feature-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.feature {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  flex: 1 1 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Progress bar */
+.progress {
+  padding: 18px 0 28px;
+}
+.progress-track {
+  background: #e6f4fb;
+  border-radius: 999px;
+  height: 18px;
+  overflow: hidden;
+}
+.progress-fill {
+  background: linear-gradient(90deg, #2E9DF7, #8BD1CB);
+  height: 100%;
+  width: 0%;
+}
+.progress-text {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* Testimonial */
+.testimonial {
+  padding: 18px 0 36px;
+  text-align: center;
+}
+.testimonial blockquote {
+  margin: 0 auto;
+  max-width: 720px;
+  font-style: italic;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.testimonial cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Small helper for visually hidden headings (accessible) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }

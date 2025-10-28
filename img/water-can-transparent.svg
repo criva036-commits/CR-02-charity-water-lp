@@ -1,0 +1,17 @@
+<!-- Simple water can SVG placeholder with transparent background -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#8BD1CB" />
+      <stop offset="100%" stop-color="#2E9DF7" />
+    </linearGradient>
+  </defs>
+  <!-- handle -->
+  <path d="M40 40 Q30 30 40 20" stroke="#2E9DF7" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- can body -->
+  <rect x="50" y="50" width="100" height="80" rx="8" fill="url(#g)" opacity="0.95"/>
+  <!-- spout -->
+  <path d="M150 70 Q170 68 176 60 Q170 58 152 66" fill="#8BD1CB"/>
+  <!-- water droplet -->
+  <path d="M164 56 Q166 48 172 46 Q170 56 164 56" fill="#fff" opacity="0.85"/>
+</svg>
